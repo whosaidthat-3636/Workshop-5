@@ -84,6 +84,7 @@ text(variable, x, y);
 	// this allows the data value to be displayed based on
 		// row number
 		// header row name
+```
 
 ### 2) Using loop to go through all the rows
 ```
