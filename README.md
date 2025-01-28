@@ -21,10 +21,47 @@ Link: [https://whosaidthat-3636.github.io/Workshop-5/]
 
 <img width="382" alt="image" src="https://github.com/user-attachments/assets/5f50eda6-9939-44a5-aea8-d9f91e920961" />
 
-- 
+- I changed the fill for each week for differentiation
+- Wasn't sure how to make the bar chart come down as well as it goes up to the top
+- Putting weeks label on the x axis
+- Adding rect to simulate the bars
+```
+function weekLabel() {
+  for(x = 0; x < table.getRowCount(); x++){
+    let row = table.getRow(x);
+    let week = row.get("Week");
+    fill(0);
+    text(week, 145 + x * 80, 350);
+    image
+  }
+}
 
+function showChart(){
+  //array
+  let colors = [
+    color(249, 56, 39), // week 1: red
+    color(255, 257, 35), // week 2: orange
+    color(255, 214, 90), // week 3: yellow
+    color(22, 196, 127), // week 4: green
+  ];
 
+  for(x = 0; x < table.getRowCount(); x++){
+    let row = table.getRow(x);
+    let barChart = row.get("Hours");
+    fill(colors[x]);
+    noStroke();
+    rect(135 + x * 80, 320, 30, -barChart * 10); 
+  }
+}
+```
 
+### 3) Visual elements 
+- This part is incomplete as I feel it is due to the way I structured my CSV and that there wasn't enough data to accumulate
+- I also feel like I didn't understand this workshop that well hence the poor outcome
+- Still I tried to follow along but only at best could come out with this
+<img width="431" alt="image" src="https://github.com/user-attachments/assets/c33d5f8e-f99e-4573-b39b-8605548a0981" />
+
+<img width="418" alt="image" src="https://github.com/user-attachments/assets/7b1f0b47-cbcc-443a-8f63-8e129d937196" />
 
 ## Notes
 ### 1) Getting table
